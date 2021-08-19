@@ -1,12 +1,10 @@
 import { useState } from "react";
 
-export interface useModalInterface {
+export type useModalType = [boolean, () => void, () => void]
 
-}
+function useModal(initialState: boolean = false): useModalType {
 
-function useModal(): useModalInterface {
-
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(initialState)
 
   return [
     isOpen,
