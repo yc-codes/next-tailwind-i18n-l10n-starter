@@ -1,15 +1,24 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
+import React from 'react'
+import Footer from '../components/footer/Footer'
+import Header from '../components/header/Header'
+import Title from '../components/title/Title'
+import { fakeArray } from '../helpers/common'
 
 const Home: NextPage = () => {
   return (
     <div className="bg-dots min-h-screen pt-44">
-      <div className="container mx-auto max-w-md flex flex-col space-y-4">
-        <h1 className="text-5xl font-semibold ">Hello World</h1>
+      <Header />
+      <div className="container mx-auto max-w-3xl flex flex-col space-y-4">
+        <Title title="Hello World" />
         <p className="">Read More <Link href="/about" passHref><a className="hover:text-blue-500 underline" >About what is this?</a></Link></p>
-        <p className="text-black/[87%] ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita earum, ea debitis quas autem ipsa ullam eveniet cum, velit assumenda iure quisquam saepe consectetur nihil laboriosam neque voluptas optio pariatur.</p>
-        <p className="">Handcrafted with <span className="text-red-500">&#9829;</span> by <a target="_blank" className="hover:text-blue-500 underline" href="https://twitter.com/yc_codes">Yash Chauhan</a></p>
-      </div>
+        {
+          fakeArray(8).map(index => {
+            return <p key={index} className="text-black/[87%] ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita earum, ea debitis quas autem ipsa ullam eveniet cum, velit assumenda iure quisquam saepe consectetur nihil laboriosam neque voluptas optio pariatur.</p>
+          })
+        }      </div>
+      <Footer />
     </div>
   )
 }

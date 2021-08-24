@@ -1,0 +1,28 @@
+{
+  "Add FC with Props": {
+    "prefix": "rfc",
+    "body": [
+      "import { FC } from \"react\";",
+      "",
+      "export interface ${TM_FILENAME_BASE}Props {",
+      "",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE}: FC<${TM_FILENAME_BASE}Props> = ({",
+      "\t",
+      "}) => {",
+      "\treturn (",
+      "\t\t<div className=\"\">${TM_FILENAME_BASE}</div>",
+      "\t);",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "Log output to console"
+  },
+  "useState": {
+    "prefix": "us",
+    "body": "const [${state}, set${state}] = useState(false)",
+    "description": "usestate"
+  }
+}
