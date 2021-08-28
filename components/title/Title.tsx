@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 export interface PageTitleProps {
   title: string
@@ -12,4 +12,4 @@ const Title: FC<PageTitleProps> = ({
   );
 }
 
-export default Title;
+export default memo(Title);
