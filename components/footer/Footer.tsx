@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 
 export interface FooterProps {
 
@@ -18,4 +18,4 @@ const Footer: FC<FooterProps> = ({
   );
 }
 
-export default Footer;
+export default memo(Footer);

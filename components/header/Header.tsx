@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, memo } from "react";
 
 export interface HeaderProps {
 
@@ -21,4 +21,4 @@ const Header: FC<HeaderProps> = ({
   );
 }
 
-export default Header;
+export default memo(Header);
